@@ -1,0 +1,17 @@
+<mvc:View controllerName="TeamChat.controller.ChatsSet" xmlns="sap.m" xmlns:f="sap.f" xmlns:mvc="sap.ui.core.mvc">
+	<f:DynamicPage id="dynamicPageId" toggleHeaderOnTitleClick="false">
+		<f:content>
+			<VBox fitContainer="true">
+				<OverflowToolbar class="sapFDynamicPageAlignContent">
+					<ToolbarSpacer/>
+					<SearchField search=".onSearch" width="17.5rem"/>
+				</OverflowToolbar>
+				<List id="ChatList" noDataText="No Chat" items="{Chats>/}">
+					<items>
+						<StandardListItem type="Navigation" title="{Chats>contactName}" icon="{Chats>photo}" description="{Chats>LatestMessage}" press="onNavigate"></StandardListItem>
+					</items>
+				</List>
+			</VBox>
+		</f:content>
+	</f:DynamicPage>
+</mvc:View>
